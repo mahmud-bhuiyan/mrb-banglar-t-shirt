@@ -1,13 +1,14 @@
 import React from "react";
 import "./Cart.css";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleRemoveFromCart }) => {
   return (
     <div>
       <h3>Order Summary: {cart.length}</h3>
       {cart.map((tshirt) => (
         <p key={tshirt._id}>
-          {tshirt.name} <button>X</button>
+          {tshirt.name}{" "}
+          <button onClick={() => handleRemoveFromCart(tshirt._id)}>X</button>
         </p>
       ))}
     </div>
