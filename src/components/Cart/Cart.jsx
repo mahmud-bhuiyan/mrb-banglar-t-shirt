@@ -7,7 +7,7 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
       <h3>Order Summary: {cart.length}</h3>
       {cart.map((tshirt) => (
         <p key={tshirt._id}>
-          {tshirt.name}{" "}
+          {tshirt.name}
           <button onClick={() => handleRemoveFromCart(tshirt._id)}>X</button>
         </p>
       ))}
