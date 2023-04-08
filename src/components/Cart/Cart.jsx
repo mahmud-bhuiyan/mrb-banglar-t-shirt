@@ -18,9 +18,18 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
   }
   return (
     <div>
-      <h3>Order Summary: {cart.length}</h3>
+      <h3 className={cart.length === 0 ? "red" : "blue"}>
+        Order Summary: {cart.length}
+      </h3>
+      <p className={`bolder ${cart.length === 3 ? "yellow" : "purple"}`}>
+        Something
+      </p>
 
-      {cart.length > 2 ? <span>Aro kino</span> : <span>Fokira</span>}
+      {cart.length > 2 ? (
+        <span className="yellow">Aro kino</span>
+      ) : (
+        <span>Fokira</span>
+      )}
 
       {message}
 
@@ -50,5 +59,14 @@ export default Cart;
  * 3. Logical &&(and) : (if the condition is true then the next thing will be displayed)
  *
  * 4. Logical ||(or): (if the condition is false then the next thing will be displayed)
+ *
+ */
+
+/**
+ * conditional css
+ *
+ * 1. use ternary
+ *
+ * 2. ternary inside template string
  *
  */
